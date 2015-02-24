@@ -15,7 +15,7 @@ Run BitlBee listening in port 6667 with default config
 ```
 docker run \
   -p 6667:6667 \
-  fr3nd/bitlbee
+  fr3nd/bitlbee -n
 ```
 
 Use a specific config directory
@@ -23,5 +23,13 @@ Use a specific config directory
 docker run \
   -p 6667:6667 \
   -v $(pwd)/bitlbee:/etc/bitlbee:ro \
-  fr3nd/bitlbee
+  fr3nd/bitlbee -n
+```
+
+Store all data into a parent host's directory
+```
+docker run \
+  -p 6667:6667 \
+  -v /tmp/bitlbee:/var/lib/bitlbee:rw \
+  fr3nd/bitlbee -n
 ```
