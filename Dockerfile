@@ -32,6 +32,7 @@ RUN make install-etc
 
 RUN useradd -d /var/lib/bitlbee --no-create-home --shell /usr/sbin/nologin bitlbee
 
+COPY bitlbee.conf /etc/bitlbee/bitlbee.conf
 RUN mkdir -p /var/lib/bitlbee/ /var/run/bitlbee
 RUN chown -R bitlbee /var/lib/bitlbee/ /var/run/bitlbee
 
