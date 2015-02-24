@@ -1,4 +1,4 @@
-# bilbee docker image
+# BitlBee docker image
 
 ## Description
 
