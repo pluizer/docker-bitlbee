@@ -37,6 +37,7 @@ RUN mkdir -p /var/lib/bitlbee/ /var/run/bitlbee
 RUN chown -R bitlbee /var/lib/bitlbee/ /var/run/bitlbee
 
 EXPOSE 6667
+VOLUME /var/lib/bitlbee
 
 WORKDIR /
 ENTRYPOINT [ "/usr/sbin/bitlbee" ]
