@@ -23,7 +23,8 @@ RUN ./configure \
       --debug=0 \
       --ssl=gnutls \
       --prefix=/usr \
-      --etcdir=/etc/bitlbee
+      --etcdir=/etc/bitlbee \
+      --purple=1
 RUN make
 # Docs fail to build. We need to force them
 RUN (cd doc && make -C user-guide)
